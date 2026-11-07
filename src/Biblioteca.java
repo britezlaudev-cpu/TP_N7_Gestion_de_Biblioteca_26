@@ -73,17 +73,17 @@ public class Biblioteca {
      * @return una cadena de texto formateada con la lista y contadores
      */
     public String listaDeSocios() {
-        String lista = "Lista de Socios:\n";
+        StringBuilder lista = new StringBuilder("Lista de Socios:\n");
         int i = 0;
         for(Socio unSocio: this.getSocios()) {
             i++;
-            lista += i + ") " + unSocio.toString() + "\n";
+            lista.append(i).append(") ").append(unSocio.toString()).append("\n");
         }
-        lista += "**************************************\n";
-        lista += "Cantidad de Socios del tipo Estudiante: " + this.cantidadDeSociosPorTipo("Estudiante") + "\n";
-        lista += "Cantidad de Socios del tipo Docente: " + this.cantidadDeSociosPorTipo("Docente") + "\n";
-        lista += "**************************************\n";
-        return lista;
+        lista.append("**************************************\n");
+        lista.append("Cantidad de Socios del tipo Estudiante: ").append(this.cantidadDeSociosPorTipo("Estudiante")).append("\n");
+        lista.append("Cantidad de Socios del tipo Docente: ").append(this.cantidadDeSociosPorTipo("Docente")).append("\n");
+        lista.append("**************************************\n");
+        return lista.toString();
     }
     /**
      * Busca y retorna un socio según su número de DNI dentro de la colección.
