@@ -18,7 +18,6 @@ public class Biblioteca {
         this.setSocios(new ArrayList<Socio>());
         this.setLibros(new ArrayList<Libro>());
     }
-
     /**
      * Constructor para crear una biblioteca con un nombre y listas preexistentes de socios y libros.
      *
@@ -42,7 +41,6 @@ public class Biblioteca {
     private void setLibros(ArrayList<Libro> p_libros) {
         this.libros = p_libros;
     }
-
     // Getters
     public String getNombre() {
         return this.nombre;
@@ -65,7 +63,6 @@ public class Biblioteca {
         Estudiante nuevoSocio = new Estudiante(p_dniSocio, p_nombre, p_carrera);
         this.getSocios().add(nuevoSocio);
     }
-
     /**
      * Crea e incorpora un nuevo socio de tipo docente a la colección de socios.
      *
@@ -77,7 +74,6 @@ public class Biblioteca {
         Docente unDocente = new Docente(p_dniSocio, p_nombre, p_area);
         this.socios.add(unDocente);
     }
-
     /**
      * Crea e incorpora un nuevo libro a la colección de la biblioteca.
      *
@@ -90,7 +86,6 @@ public class Biblioteca {
         Libro unLibro = new Libro(p_titulo, p_edicion, p_editorial, p_anio);
         this.getLibros().add(unLibro);
     }
-
     /**
      * Intenta realizar el préstamo de un libro a un socio si este cumple con las condiciones reglamentarias.
      *
@@ -109,7 +104,6 @@ public class Biblioteca {
             return false;
         }
     }
-
     /**
      * Registra la devolución de un libro que se encuentra actualmente prestado.
      *
@@ -124,7 +118,6 @@ public class Biblioteca {
             throw new LibroNoPrestadoException("El libro " + p_libro.getTitulo() + " no se puede devolver ya que se encuentra en la biblioteca");
         }
     }
-
     /**
      * Cuenta la cantidad de socios según su tipo (por ejemplo, "Estudiante" o "Docente").
      *
@@ -140,7 +133,6 @@ public class Biblioteca {
         }
         return cant;
     }
-
     /**
      * Obtiene una lista con todos los préstamos que se encuentran vencidos a la fecha actual.
      *
@@ -158,7 +150,6 @@ public class Biblioteca {
         }
         return listaVencidos;
     }
-
     /**
      * Retorna una lista de aquellos docentes que cumplen con la condición de ser responsables.
      *
@@ -176,7 +167,6 @@ public class Biblioteca {
         }
         return listaResponsables;
     }
-
     /**
      * Busca y retorna un socio según su número de DNI dentro de la colección.
      *
@@ -191,7 +181,6 @@ public class Biblioteca {
         }
         return null;
     }
-
     /**
      * Identifica y retorna el nombre del socio que actualmente tiene prestado un determinado libro.
      *
@@ -213,7 +202,6 @@ public class Biblioteca {
         // Si no se encontró un préstamo activo, lanzamos la excepción esperada
         throw new LibroNoPrestadoException("El libro " + p_libro.getTitulo() + " se encuentra en la biblioteca");
     }
-
     /**
      * Genera y retorna un listado completo de socios y estadísticas por tipo, en formato de texto.
      *
@@ -232,7 +220,6 @@ public class Biblioteca {
         lista.append("**************************************\n");
         return lista.toString();
     }
-
     /**
      * Genera un listado con los títulos únicos de todos los libros de la biblioteca.
      *
@@ -249,7 +236,6 @@ public class Biblioteca {
         }
         return t.toString();
     }
-
     /**
      * Genera un listado completo de todos los libros indicando su estado de préstamo actual.
      *
@@ -272,7 +258,6 @@ public class Biblioteca {
         }
         return z.toString();
     }
-
     /**
      * Genera un listado en formato de texto de aquellos docentes que son responsables.
      *

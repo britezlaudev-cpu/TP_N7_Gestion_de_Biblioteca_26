@@ -36,7 +36,6 @@ public class Prestamo {
     private void setSocio(Socio p_socio){
         this.socio = p_socio;
     }
-
     // Getters
     public Calendar getFechaRetiro(){
         return this.fechaRetiro;
@@ -59,7 +58,6 @@ public class Prestamo {
     public void registrarFechaDevolucion(Calendar p_fecha){
         this.setFechaDevolucion(p_fecha);
     }
-
     /**
      * Evalúa si el préstamo se encuentra vencido en función de una fecha dada
      * y de los días de préstamo permitidos según el tipo de socio.
@@ -79,7 +77,6 @@ public class Prestamo {
             return false;
         }
     }
-
     /**
      * Retorna una representación en formato de cadena de texto con los detalles del préstamo,
      * incluyendo las fechas, el libro y el socio asociado.

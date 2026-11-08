@@ -59,7 +59,6 @@ public class Libro {
     private void setPrestamo(ArrayList<Prestamo> p_prestamo){
         this.prestamos = p_prestamo;
     }
-
     // Getters
     public String getTitulo(){
         return this.titulo;
@@ -86,7 +85,6 @@ public class Libro {
     public boolean agregarPrestamo(Prestamo p_prestamo){
         return this.getPrestamo().add(p_prestamo);
     }
-
     /**
      * Remueve un registro de préstamo de la colección del libro.
      *
@@ -96,7 +94,6 @@ public class Libro {
     public boolean quitarPrestamo(Prestamo p_prestamo){
         return this.getPrestamo().remove(p_prestamo);
     }
-
     /**
      * Determina si el libro se encuentra actualmente prestado (es decir, si el último préstamo registrado no tiene fecha de devolución).
      *
@@ -106,7 +103,6 @@ public class Libro {
         Prestamo ultimo = this.ultimoPrestamo();
         return ultimo != null && ultimo.getFechaDevolucion() == null;
     }
-
     /**
      * Obtiene el último préstamo registrado en el historial del libro.
      *
@@ -118,7 +114,6 @@ public class Libro {
         } else 
             return this.getPrestamo().get(this.getPrestamo().size() - 1);
     }
-
     /**
      * Retorna una representación en formato de cadena de texto del libro, mostrando su título.
      *

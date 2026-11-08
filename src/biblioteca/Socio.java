@@ -75,7 +75,6 @@ public abstract class Socio {
     public boolean addPrestamo(Prestamo p_prestamo){
         return this.getPrestamo().add(p_prestamo);
     }
-
     /**
      * Cuenta la cantidad de libros que el socio tiene actualmente asociados a través de sus préstamos.
      *
@@ -90,7 +89,6 @@ public abstract class Socio {
         }
         return libros;
     }
-
     /**
      * Retorna una representación en formato de texto con los datos principales del socio,
      * incluyendo su DNI, nombre, tipo de clase y la cantidad de libros prestados.
@@ -101,7 +99,6 @@ public abstract class Socio {
         return "DNI: " + this.getDniSocio() + " || Nombre y Apellido: " + this.getNombre() + "(" + this.soyDeLaClase() + ") ||"
                 + " Libros Prestados: " + this.cantLibrosPrestados();
     }
-
     /**
      * Evalúa si el socio está habilitado para realizar nuevos pedidos de préstamos.
      *
@@ -115,12 +112,10 @@ public abstract class Socio {
         }
         return false;
     }
-
     /**
      * Método abstracto para obtener el tipo o subtipo de socio en formato de texto.
      *
      * @return Una cadena de texto indicando la clase del socio (por ejemplo, "Estudiante" o "Docente").
      */
     public abstract String soyDeLaClase();
-
 }
