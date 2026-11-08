@@ -41,13 +41,13 @@ Esta clase ademas tiene dos metodos importantes y complejos que se encargan de b
 
 Por ultimo, la clase Biblioteca se encarga de listar lo siguiente:
  
-Libros que se encuentran en la biblioteca. (Y si estan actualmente prestados o no)
+- Libros que se encuentran en la biblioteca. (Y si estan actualmente prestados o no)
 
-Titulos de los libros.
+- Titulos de los libros.
 
-Socios.
+- Socios.
 
-Docentes responsables.
+- Docentes responsables.
 
 
 **Libro:** La clase libro funciona en colaboración con la clase Biblioteca, además de tener una colección del tipo Prestamo.
