@@ -98,8 +98,8 @@ public abstract class Socio {
      * @return Una cadena formateada con la información del socio.
      */
     public String toString(){
-        return "DNI: " + this.getDniSocio() + "|| Nombre y Apellido: " + this.getNombre() + "(" + this.soyDeLaClase() + ") ||"
-                + "Libros Prestados: " + this.cantLibrosPrestados();
+        return "DNI: " + this.getDniSocio() + " || Nombre y Apellido: " + this.getNombre() + "(" + this.soyDeLaClase() + ") ||"
+                + " Libros Prestados: " + this.cantLibrosPrestados();
     }
 
     /**
