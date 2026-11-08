@@ -2,6 +2,7 @@
 ### - Proyecto integrador desarrollado en grupo en JAVA -
 
 Universidad Nacional del Nordeste (UNNE) — FaCENA
+
 Programación Orientada a Objetos — Proyecto Integrador 2026
 
 ### 📝 Descripción del Proyecto
