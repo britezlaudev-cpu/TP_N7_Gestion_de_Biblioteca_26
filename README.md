@@ -43,15 +43,15 @@ Además, tiene un método toString que devuelve un String con el titulo del libr
 - **Entorno de Desarrollo:** BlueJ / IDE compatible con Java
 - **Conceptos de POO aplicados:**
   
-        -Herencia y clases abstractas (Socio, Estudiante, Docente)
+  -Herencia y clases abstractas (Socio, Estudiante, Docente)
   
-        -Polimorfismo y ligadura dinámica (puedePedir(), soyDeLaClase())
+  -Polimorfismo y ligadura dinámica (puedePedir(), soyDeLaClase())
   
-        -Encapsulamiento y diseño guiado por UML
+  -Encapsulamiento y diseño guiado por UML
   
-        -Colecciones genéricas (ArrayList<Libro>, ArrayList<Socio>, ArrayList<Prestamo>)
+  -Colecciones genéricas (ArrayList<Libro>, ArrayList<Socio>, ArrayList<Prestamo>)
   
-        -Manejo de excepciones personalizadas (LibroNoPrestadoException)
+  -Manejo de excepciones personalizadas (LibroNoPrestadoException)
 
 ### 👥Este proyecto fue realizado en equipo
 **Equipo de trabajo:**
@@ -61,10 +61,8 @@ Clase Préstamo y Socio: Luque, Valentin Nicolas
 
 Clases heredadas Docente y Estudiante: Gomez, Alberto Gaston
 
-Clase Biblioteca: Arce, Federico Hernan
-
-                  Arredo, Araceli Estefany
-                  
+Clase Biblioteca: Arce, Federico Hernan - 
+                  Arredo, Araceli Estefany - 
                   Britez, Lautaro Tomas
 
 
