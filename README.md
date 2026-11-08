@@ -56,6 +56,7 @@ Además, tiene un método toString que devuelve un String con el titulo del libr
 
 ### 👥Este proyecto fue realizado en equipo
 **Equipo de trabajo:**
+
 Clase Libro: Cabrera, Luz Arianna
 
 Clase Préstamo y Socio: Luque, Valentin Nicolas
