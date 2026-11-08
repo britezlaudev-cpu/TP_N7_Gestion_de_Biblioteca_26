@@ -1,3 +1,5 @@
+package biblioteca;
+
 /**
  * Excepción personalizada que representa la falla al intentar realizar
  * una operación de devolución o consulta sobre un libro que no figura
