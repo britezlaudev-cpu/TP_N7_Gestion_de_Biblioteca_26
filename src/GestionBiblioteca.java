@@ -210,7 +210,10 @@ public class GestionBiblioteca {
                         System.out.println("El socio ingresado (" + socioBusqueda.getNombre() + ") es de tipo " + socioBusqueda.soyDeLaClase() + ". Solo los docentes pueden recibir dias adicionales de prestamo.");
                     }
                     break;
-
+                case 13:
+                    System.out.println("Saliendo del sistema. ¡Hasta luego!");
+                    break;
+                    
                 case 0:
                     System.out.println("Saliendo del sistema. ¡Hasta luego!");
                     break;
@@ -219,7 +222,7 @@ public class GestionBiblioteca {
                     System.out.println("Opción inválida. Intente nuevamente.");
             }
 
-        } while (opcion != 0);
+        } while (opcion != 0 && opcion != 13);
 
         scanner.close();
     }
