@@ -75,7 +75,7 @@ public class Biblioteca {
      */
     public boolean prestarLibro(Calendar p_fechaRetiro, Socio p_socio, Libro p_libro) {
         if (p_socio.puedePedir()) {
-            Prestamo nuevoPrestamo = new Prestamo(p_fechaRetiro, p_socio, p_libro);
+            Prestamo nuevoPrestamo = new Prestamo(p_fechaRetiro, p_libro, p_socio);
             p_socio.addPrestamo(nuevoPrestamo);
             p_libro.agregarPrestamo(nuevoPrestamo);
             return true;
@@ -134,7 +134,7 @@ public class Biblioteca {
         }
         return listaResponsables;
     }
-    
+
     /**
      * Busca y retorna un socio según su número de DNI dentro de la colección.
      *
@@ -150,14 +150,21 @@ public class Biblioteca {
         return null;
     }
 
+
+
     public String quienTieneElLibro(Libro p_libro) throws LibroNoPrestadoException {
         for (Libro unLibro : this.getLibros()) {
             if (p_libro.getTitulo().equalsIgnoreCase(unLibro.getTitulo())) {
                 Prestamo unPrestamo = unLibro.ultimoPrestamo();
-                return unPrestamo.getSocio().getNombre();
+
+                // Verificamos si existe un préstamo y si el libro efectivamente está prestado
+                if (unPrestamo != null && unLibro.prestado()) {
+                    return unPrestamo.getSocio().getNombre();
+                }
             }
         }
-        throw new LibroNoPrestadoException("El libro se encuentra en la biblioteca");
+        // Si no se encontró un préstamo activo, lanzamos la excepción esperada
+        throw new LibroNoPrestadoException("El libro " + p_libro.getTitulo() + " se encuentra en la biblioteca");
     }
 
     /**
@@ -180,12 +187,15 @@ public class Biblioteca {
     }
 
     public String listaDeTitulos() {
-        StringBuilder t = new StringBuilder();
-        t.append("Lista de titulos.");
-        for(Libro unLibro : this.getLibros()) {
-            t.append("* Titulo").append(unLibro.toString()).append("\n");
+        StringBuilder t = new StringBuilder("Lista de Títulos:\n");
+        ArrayList<String> titulosUnicos = new ArrayList<>();
+        for (Libro unLibro : this.getLibros()) {
+            if (!titulosUnicos.contains(unLibro.getTitulo())) {
+                titulosUnicos.add(unLibro.getTitulo());
+                t.append("* ").append(unLibro.getTitulo()).append("\n");
+            }
         }
-        return  t.toString();
+        return t.toString();
     }
 
     public String listaDeLibros() {
@@ -194,7 +204,7 @@ public class Biblioteca {
 
         for (Libro unLibro : this.getLibros()) {
             z.append(i)
-                    .append(") Titulo: ")
+                    .append(") ")
                     .append(unLibro.toString())
                     .append(" || Prestado: (")
                     // Operador ternario: si es true devuelve "Sí", si es false devuelve "No"
@@ -223,5 +233,4 @@ public class Biblioteca {
         }
         return sb.toString();
     }
-}
 }
